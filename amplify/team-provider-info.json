@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "authserver7905df6f": {}
+      },
+      "function": {
+        "authserver": {
+          "deploymentBucketName": "amplify-authserver-dev-195813-deployment",
+          "s3Key": "amplify-builds/authserver-466e71334c302b2f6474-build.zip"
+        }
       }
     }
   }

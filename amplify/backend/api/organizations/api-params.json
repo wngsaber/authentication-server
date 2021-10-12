@@ -1,0 +1,45 @@
+{
+  "paths": [
+    {
+      "name": "/organizations",
+      "lambdaFunction": "authserver",
+      "privacy": {
+        "protected": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ],
+        "unauth": [
+          "/GET"
+        ]
+      },
+      "policyResourceName": "/organizations"
+    }
+  ],
+  "resourceName": "organizations",
+  "apiName": "organizations",
+  "functionArns": [
+    {
+      "lambdaFunction": "authserver"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 1,
+    "authRoleName": "amplify-authserver-dev-195813-authRole",
+    "unAuthRoleName": "amplify-authserver-dev-195813-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "authserver",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

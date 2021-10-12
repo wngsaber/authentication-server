@@ -1,6 +1,6 @@
 {
     "identityPoolName": "authserver7905df6f_identitypool_7905df6f",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "authse7905df6f",
     "userPoolName": "authserver7905df6f_userpool_7905df6f",
     "autoVerifiedAttributes": [
