@@ -10,6 +10,11 @@
       "StackName": "amplify-authserver-dev-195813",
       "StackId": "arn:aws:cloudformation:us-east-1:741411890269:stack/amplify-authserver-dev-195813/19d87810-2aef-11ec-b01d-0a1393eb7b59",
       "AmplifyAppId": "d1jjnj5gxbj4w8"
+    },
+    "categories": {
+      "auth": {
+        "authserver7905df6f": {}
+      }
     }
   }
 }
