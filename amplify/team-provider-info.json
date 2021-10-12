@@ -18,7 +18,7 @@
       "function": {
         "authserver": {
           "deploymentBucketName": "amplify-authserver-dev-195813-deployment",
-          "s3Key": "amplify-builds/authserver-466e71334c302b2f6474-build.zip"
+          "s3Key": "amplify-builds/authserver-61634570584d4335466d-build.zip"
         }
       }
     }

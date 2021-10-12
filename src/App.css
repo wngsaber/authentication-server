@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+#parent-1 { white-space: nowrap; text-align: right;color:rgb(236, 67, 67)}
+#parent-2 { white-space: nowrap; text-align: right;}
+.child { display: inline-block; min-width:205px}

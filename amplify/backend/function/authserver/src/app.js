@@ -12,6 +12,7 @@ const AWS = require('aws-sdk')
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 var bodyParser = require('body-parser')
 var express = require('express')
+var uuid = require('node-uuid');
 
 AWS.config.update({ region: process.env.TABLE_REGION });
 
@@ -80,7 +81,7 @@ app.get(path + hashKeyPath, function(req, res) {
     KeyConditions: condition
   }
 
-  dynamodb.query(queryParams, (err, data) => {
+  dynamodb.scan(queryParams, (err, data) => {
     if (err) {
       res.statusCode = 500;
       res.json({error: 'Could not load items: ' + err});
@@ -170,10 +171,13 @@ app.post(path, function(req, res) {
     req.body['userId'] = req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;
   }
 
+  req.body.id = uuid.v4();
+
   let putItemParams = {
     TableName: tableName,
     Item: req.body
   }
+
   dynamodb.put(putItemParams, (err, data) => {
     if(err) {
       res.statusCode = 500;
